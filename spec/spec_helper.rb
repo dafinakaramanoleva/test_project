@@ -1,9 +1,9 @@
 require 'rubygems'
-require 'spork'
+
 #uncomment the following line to use spork with the debugger
 #require 'spork/ext/ruby-debug'
 
-Spork.prefork do
+
 
   # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV["RAILS_ENV"] ||= 'test'
@@ -22,7 +22,7 @@ ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 RSpec.configure do |config|
   # ## Mock Framework
   #
-  # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
+  # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:key => "value", 
   #
   # config.mock_with :mocha
   # config.mock_with :flexmock
@@ -54,12 +54,11 @@ end
   # need to restart spork for it take effect.
 
 
-end
 
-Spork.each_run do
-  # This code will be run each time you run your specs.
+# Spork.each_run do
+#   # This code will be run each time you run your specs.
 
-end
+# end
 
 # --- Instructions ---
 # Sort the contents of this file into a Spork.prefork and a Spork.each_run
